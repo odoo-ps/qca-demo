@@ -1,0 +1,27 @@
+<!-- hr.view_hr_job_form -->
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="hr_job_form_inherit">
+      <field name="name">Job Form Smart button</field>
+      <field name="model">hr.job</field>
+      <field name="inherit_id" ref="hr.view_hr_job_form"/>
+      <field name="arch" type="xml">
+        <field name="user_id" position="after">
+          <field name="applicant_tag_ids" widget="many2many_tags"/>
+        </field>
+        <div name="button_box" position="inside">
+            <button class="oe_stat_button"
+            icon="fa-pencil"
+            name="action_matching_applicant"
+            type="object">
+            <field name="matching_applicant_count" widget="statinfo" string="Matches"/>
+        </button>
+
+          <!-- matching_applicant_count -->
+        </div>
+      </field>
+    </record>
+
+  </data>
+</odoo>

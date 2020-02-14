@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="msf_hr.list">
+      <field name="name">msf_hr list</field>
+      <field name="model">msf_hr.msf_hr</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="msf_hr.action_window">
+      <field name="name">msf_hr window</field>
+      <field name="res_model">msf_hr.msf_hr</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="msf_hr.action_server">
+      <field name="name">msf_hr server</field>
+      <field name="model_id" ref="model_msf_hr_msf_hr"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="msf_hr" id="msf_hr.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="msf_hr.menu_1" parent="msf_hr.menu_root"/>
+    <menuitem name="Menu 2" id="msf_hr.menu_2" parent="msf_hr.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="msf_hr.menu_1_list" parent="msf_hr.menu_1"
+              action="msf_hr.action_window"/>
+    <menuitem name="Server to list" id="msf_hr" parent="msf_hr.menu_2"
+              action="msf_hr.action_server"/>
+-->
+  </data>
+</odoo>
